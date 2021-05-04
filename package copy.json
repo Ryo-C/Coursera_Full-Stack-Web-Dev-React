@@ -1,0 +1,24 @@
+{
+  "name": "coursera_full-stack-web-dev-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryo-C/Coursera_Full-Stack-Web-Dev-React.git"
+  },
+  "author": "Ryo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryo-C/Coursera_Full-Stack-Web-Dev-React/issues"
+  },
+  "homepage": "https://github.com/Ryo-C/Coursera_Full-Stack-Web-Dev-React#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
