@@ -85,11 +85,69 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-warning btn-block btn-sm" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345628</strong>" data-placement="bottom" href="#reserve">Reserve Table</a>
+                    <a role="button" class="btn btn-warning btn-block btn-sm" data-toggle="modal"data-target="#reserveModal"> Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            Number of Guests
+                        </div>
+                        <div class="col-9">
+                            <input type="radio" id="1" name="guests" value="1">
+                            <label for="1">1</label>
+                            <input type="radio" id="2" name="guests" value="2">
+                            <label for="2">2</label>
+                            <input type="radio" id="3" name="guests" value="3">
+                            <label for="3">3</label>
+                            <input type="radio" id="4" name="guests" value="4">
+                            <label for="4">4</label>
+                            <input type="radio" id="5" name="guests" value="5">
+                            <label for="5">5</label>
+                            <input type="radio" id="6" name="guests" value="6">
+                            <label for="6">6</label>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-3">Section</div>
+                        <div class="col-9">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Smoking
+                                </label>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-3">
+                            Date and Time
+                        </div>
+                        <div class="col-9">
+                            <input type="date">
+                            <input type="time">
+                        </div>
+                    </div><br>
+                    <div id="reserve" class="row justify-content-center">
+                            <button type="button" class="btn btn-primary">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -180,47 +238,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row row-content align-items-center justify-content-center">
-            <div class="col-12">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                Number of Guests
-                            </div>
-                            <div class="col-9">
-                                <input type="radio" id="1" name="guests" value="1">
-                                <label for="1">1</label>
-                                <input type="radio" id="2" name="guests" value="2">
-                                <label for="2">2</label>
-                                <input type="radio" id="3" name="guests" value="3">
-                                <label for="3">3</label>
-                                <input type="radio" id="4" name="guests" value="4">
-                                <label for="4">4</label>
-                                <input type="radio" id="5" name="guests" value="5">
-                                <label for="5">5</label>
-                                <input type="radio" id="6" name="guests" value="6">
-                                <label for="6">6</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-3">
-                                Date and Time
-                            </div>
-                            <div class="col-9">
-                                <input type="date">
-                                <input type="time">
-                            </div>
-                        </div><br>
-                        <div id="reserve" class="row justify-content-center">
-                                <button type="button" class="btn btn-primary">Reserve</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="footer">
@@ -269,11 +286,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
